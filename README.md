@@ -1,3 +1,31 @@
+# flutter_rust_bridge_template_enhanced
+
+## Run locally
+### Web
+Most commands are defined in the [justfile](./justfile). To run locally just run `just run_web` and open [http://localhost:8080/](http://localhost:8080/) in your fave browser. You can open the page in a browser by running `just open_<browser>`.
+
+Support status for browsers is as follows
+| Browser | Supported? |
+|---------|------------|
+| Chrome  | ✅          |
+| Safari  | ❌          |
+| Firefox | ❌          |
+
+
+### Desktop
+To run locally for desktop run `just run_<OS>`.
+
+Support status for OS's is as follows
+
+| Browser       | Supported? |
+|---------------|------------|
+| MacOS (intel) | ✅          |
+| MacOs (M1)    | ❔          |
+| Windows       | ❔          |
+| Linux         | ❔          |
+
+
+Old readme (everything past here is from the source project)
 # flutter_rust_bridge_template
 
 This repository serves as a template for Flutter projects calling into native Rust
