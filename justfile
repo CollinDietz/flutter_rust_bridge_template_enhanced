@@ -15,4 +15,24 @@ clean:
 serve *args='':
     flutter pub run flutter_rust_bridge:serve {{args}}
 
+run_mac_intel:
+    flutter run -d mac
+
+run_windows:
+    echo "this is not yet functional"
+
+run_linux:
+    echo "this is not yet functional"
+
+run_web: serve
+
+open_chrome:
+    open -a "Google Chrome" http://localhost:8080/
+
+open_firefox:
+    echo "this is not yet functional"
+
+open_safari:
+    echo "this is not yet functional"
+
 # vim:expandtab:sw=4:ts=4
