@@ -10,14 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Extract Repo Name
-        run: |
-          echo "Extracting Repository Name..."
-          export REPO_NAME=${GITHUB_REPOSITORY##*/}
-          echo "::set-env name=REPO_NAME::$REPO_NAME"
-        id: repo_name
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
-         baseHref: /${{ steps.repo_name.outputs.REPO_NAME }}/
+         baseHref: /flutter_rust_bridge_template_enhanced/
