@@ -8,8 +8,8 @@ Support status for browsers is as follows
 | Browser | Supported? |
 |---------|------------|
 | Chrome  | ✅          |
-| Safari  | ❌          |
-| Firefox | ❌          |
+| Safari  | ✅          |
+| Firefox | ✅          |
 
 
 ### Desktop

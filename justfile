@@ -11,9 +11,10 @@ lint:
 clean:
     flutter clean
     cd native && cargo clean
+    rm -rf web/pkg
     
 serve *args='':
-    flutter pub run flutter_rust_bridge:serve {{args}}
+    dart run flutter_rust_bridge:serve {{args}}
 
 run_mac_intel:
     flutter run -d mac
