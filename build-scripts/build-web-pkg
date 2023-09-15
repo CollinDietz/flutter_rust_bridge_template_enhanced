@@ -7,8 +7,6 @@ rustup toolchain install nightly
 rustup +nightly component add rust-src
 rustup +nightly target add wasm32-unknown-unknown
 
-cargo install wasm-pack
-
 # infered from https://github.com/fzyzcjy/flutter_rust_bridge/blob/master/frb_dart/bin/serve.dart
 export RUSTUP_TOOLCHAIN=nightly
 export RUSTFLAGS='-C target-feature=+atomics,+bulk-memory,+mutable-globals'

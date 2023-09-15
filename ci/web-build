@@ -2,6 +2,6 @@
 
 set -e
 
-./build-scripts/install_dependencies
+. ./build-scripts/install_dependencies
 ./build-scripts/code-gen
 ./build-scripts/build-web-pkg

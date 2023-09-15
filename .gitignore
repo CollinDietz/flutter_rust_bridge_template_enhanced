@@ -48,3 +48,6 @@ jniLibs
 # generated files
 bridge_generated.*
 bridge_definitions.*
+
+# tool dependencies
+.cargo/
