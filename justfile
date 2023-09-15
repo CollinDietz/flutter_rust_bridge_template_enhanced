@@ -39,6 +39,4 @@ open_firefox:
 open_safari:
     echo "this is not yet functional"
 
-build_for_web: install_dependencies build-web-pkg
-
 # vim:expandtab:sw=4:ts=4
