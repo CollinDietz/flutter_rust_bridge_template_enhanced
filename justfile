@@ -3,7 +3,7 @@ default: gen lint
 install_dependencies:
     ./build-scripts/install_dependencies
 
-gen:
+gen: install_dependencies
     ./build-scripts/code-gen
 
 build-web-pkg: gen
@@ -15,9 +15,9 @@ lint:
 
 clean:
     ./build-scripts/clean
-    
-serve *args='': gen build-web-pkg
-    dart run flutter_rust_bridge:serve {{args}}
+
+serve: gen build-web-pkg
+    ./build-scripts/serve
 
 run_mac_intel:
     flutter run -d mac

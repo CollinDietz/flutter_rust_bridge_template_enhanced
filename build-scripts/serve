@@ -4,8 +4,4 @@ set -e
 
 . build-scripts/set-path-for-dependencies
 
-flutter pub get
-
-flutter_rust_bridge_codegen
-
-cd native && cargo build
+dart run flutter_rust_bridge:serve

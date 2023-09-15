@@ -2,6 +2,8 @@
 
 set -e
 
+. ./build-scripts/set-path-for-dependencies
+
 # from https://cjycode.com/flutter_rust_bridge/template/setup_web.html
 rustup toolchain install nightly
 rustup +nightly component add rust-src

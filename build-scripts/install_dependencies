@@ -17,5 +17,3 @@ while IFS=' ' read -r crate version; do
     echo Installing $crate@$version
     cargo install $crate@$version --root $dir
 done < "$filename"
-
-export PATH="`pwd`/$dir/bin:$PATH"
