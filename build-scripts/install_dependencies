@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# looping made by ChatGPT
+
+set -e
+
+filename="cargo_dependencies"
+dir=".cargo"
+
+if [ ! -f "$filename" ]; then
+    echo "File not found: $filename"
+    exit 1
+fi
+
+mkdir -p $dir
+
+while IFS=' ' read -r crate version; do
+    echo Installing $crate@$version
+    cargo install $crate@$version --root $dir
+done < "$filename"

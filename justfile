@@ -1,20 +1,23 @@
 default: gen lint
 
-gen:
-    flutter pub get
-    flutter_rust_bridge_codegen
+install_dependencies:
+    ./build-scripts/install_dependencies
+
+gen: install_dependencies
+    ./build-scripts/code-gen
+
+build-web-pkg: gen
+    ./build-scripts/build-web-pkg
 
 lint:
     cd native && cargo fmt
     dart format .
 
 clean:
-    flutter clean
-    cd native && cargo clean
-    rm -rf web/pkg
-    
-serve *args='':
-    dart run flutter_rust_bridge:serve {{args}}
+    ./build-scripts/clean
+
+serve: gen build-web-pkg
+    ./build-scripts/serve
 
 run_mac_intel:
     flutter run -d mac
