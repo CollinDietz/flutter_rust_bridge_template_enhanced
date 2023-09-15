@@ -4,7 +4,7 @@ set -e
 
 flutter pub get
 
-cd native && cargo build
+cargo build
 
 flutter_rust_bridge_codegen \
    --rust-input native/src/api.rs \
@@ -13,3 +13,5 @@ flutter_rust_bridge_codegen \
    --extra-c-output-path macos/Runner/ \
    --dart-decl-output lib/bridge_definitions.dart \
    --wasm
+
+cd native && cargo build

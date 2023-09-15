@@ -11,11 +11,9 @@ lint:
     dart format .
 
 clean:
-    flutter clean
-    cd native && cargo clean
-    rm -rf web/pkg
+    ./build-scripts/clean
     
-serve *args='': build-web-pkg gen
+serve *args='': gen build-web-pkg
     dart run flutter_rust_bridge:serve {{args}}
 
 run_mac_intel:
