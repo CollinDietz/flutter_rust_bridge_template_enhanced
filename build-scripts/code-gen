@@ -10,3 +10,5 @@ flutter_rust_bridge_codegen \
    --extra-c-output-path macos/Runner/ \
    --dart-decl-output lib/bridge_definitions.dart \
    --wasm
+
+cd native && cargo build
