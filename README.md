@@ -1,5 +1,10 @@
 # flutter_rust_bridge_template_enhanced
 
+## GH Pages
+This repo automatically deploys the output of a build of `main` to GH pages
+
+Access it here: https://collindietz.github.io/flutter_rust_bridge_template_enhanced/
+
 ## Run locally
 ### Web
 Most commands are defined in the [justfile](./justfile). To run locally just run `just run_web` and open [http://localhost:8080/](http://localhost:8080/) in your fave browser. You can open the page in a browser by running `just open_<browser>`.
@@ -8,8 +13,8 @@ Support status for browsers is as follows
 | Browser | Supported? |
 |---------|------------|
 | Chrome  | ✅          |
-| Safari  | ❌          |
-| Firefox | ❌          |
+| Safari  | ✅          |
+| Firefox | ✅          |
 
 
 ### Desktop
