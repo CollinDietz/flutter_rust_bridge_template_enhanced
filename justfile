@@ -1,14 +1,10 @@
 default: gen lint
 
 gen:
-    flutter pub get
-    flutter_rust_bridge_codegen \
-        --rust-input native/src/api.rs \
-        --dart-output lib/bridge_generated.dart \
-        --c-output ios/Runner/bridge_generated.h \
-        --extra-c-output-path macos/Runner/ \
-        --dart-decl-output lib/bridge_definitions.dart \
-        --wasm
+    ./build-scripts/code-gen
+
+build-web-pkg:
+    ./build-scripts/build-web-pkg
 
 lint:
     cd native && cargo fmt
@@ -19,7 +15,7 @@ clean:
     cd native && cargo clean
     rm -rf web/pkg
     
-serve *args='':
+serve *args='': build-web-pkg gen
     dart run flutter_rust_bridge:serve {{args}}
 
 run_mac_intel:
