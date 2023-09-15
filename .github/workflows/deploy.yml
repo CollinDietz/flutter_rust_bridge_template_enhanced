@@ -1,7 +1,6 @@
 name: deploy
 
 on:
-  pull_request:
   push:
     branches: [ main ]
 
@@ -16,4 +15,3 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
          baseHref: /flutter_rust_bridge_template_enhanced/
-      - run: tree build
