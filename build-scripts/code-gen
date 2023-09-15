@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+flutter pub get
+
+flutter_rust_bridge_codegen
+
+cd native && cargo build

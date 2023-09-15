@@ -1,19 +1,22 @@
 default: gen lint
 
+install_dependencies:
+    ./build-scripts/install_dependencies
+
 gen:
-    flutter pub get
-    flutter_rust_bridge_codegen
+    ./build-scripts/code-gen
+
+build-web-pkg: gen
+    ./build-scripts/build-web-pkg
 
 lint:
     cd native && cargo fmt
     dart format .
 
 clean:
-    flutter clean
-    cd native && cargo clean
-    rm -rf web/pkg
+    ./build-scripts/clean
     
-serve *args='':
+serve *args='': gen build-web-pkg
     dart run flutter_rust_bridge:serve {{args}}
 
 run_mac_intel:
@@ -35,5 +38,7 @@ open_firefox:
 
 open_safari:
     echo "this is not yet functional"
+
+build_for_web: install_dependencies build-web-pkg
 
 # vim:expandtab:sw=4:ts=4

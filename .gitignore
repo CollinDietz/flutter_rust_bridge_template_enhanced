@@ -45,5 +45,6 @@ native/target
 xcuserdata
 jniLibs
 
-Cargo.lock
-pubspec.lock
+# generated files
+bridge_generated.*
+bridge_definitions.*

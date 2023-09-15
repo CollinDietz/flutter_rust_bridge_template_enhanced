@@ -1,17 +1,15 @@
-name: deploy
+name: builds
 
 on:
-  push:
+  push: 
     branches: [ main ]
+  pull_request:
 
 jobs:
-  build:
+  web-build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
       - run: just build_for_web
-      - uses: bluefireteam/flutter-gh-pages@v7
-        with:
-         baseHref: /flutter_rust_bridge_template_enhanced/

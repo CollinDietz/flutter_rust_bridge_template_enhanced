@@ -1,0 +1,8 @@
+cargo-expand v1.0.70:
+    cargo-expand
+cargo-generate v0.18.2:
+    cargo-generate
+flutter_rust_bridge_codegen v1.81.0:
+    flutter_rust_bridge_codegen
+wasm-pack v0.12.1:
+    wasm-pack
