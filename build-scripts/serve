@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-. build-scripts/set-path-for-dependencies
-
-dart run flutter_rust_bridge:serve

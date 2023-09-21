@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-dir=".cargo"
-
-export PATH="`pwd`/$dir/bin:$PATH"

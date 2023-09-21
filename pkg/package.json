@@ -1,0 +1,9 @@
+{
+  "name": "native",
+  "version": "0.1.0",
+  "files": [
+    "native_bg.wasm",
+    "native.js"
+  ],
+  "browser": "native.js"
+}
